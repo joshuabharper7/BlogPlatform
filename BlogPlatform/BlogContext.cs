@@ -30,7 +30,8 @@ namespace BlogPlatform
 
             modelBuilder.Entity<Category>().HasData(
                 new Category(1,"Woodworking"),
-                new Category(2, "parenting")
+                new Category(2, "parenting"),
+                new Category(3, "Coding")
                 );
         }
     }

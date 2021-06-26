@@ -15,12 +15,16 @@ namespace BlogPlatform.Repositories
         }
         public void Create(Category obj)
         {
-            throw new NotImplementedException();
+            db.Categories.Add(obj);
+
+            db.SaveChanges();
         }
 
         public void Delete(Category obj)
         {
-            throw new NotImplementedException();
+            db.Categories.Remove(obj);
+
+            db.SaveChanges();
         }
 
         public IEnumerable<Category> GetAll()
@@ -50,7 +54,9 @@ namespace BlogPlatform.Repositories
 
         public void Update(Category obj)
         {
-            throw new NotImplementedException();
+            db.Categories.Update(obj);
+
+            db.SaveChanges();
         }
     }
 }

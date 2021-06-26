@@ -4,14 +4,16 @@ using BlogPlatform;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlogPlatform.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    partial class BlogContextModelSnapshot : ModelSnapshot
+    [Migration("20210626031520_CompleteFunctionality_ish")]
+    partial class CompleteFunctionality_ish
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,11 +45,6 @@ namespace BlogPlatform.Migrations
                         {
                             Id = 2,
                             Name = "parenting"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Coding"
                         });
                 });
 

@@ -39,7 +39,7 @@
 
             <td>
                 <button type="button" onclick="location.href='/Post/Details/@item.Id'">Details</button> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <button type="button" onclick="location.href='/Post/Delete/@item.Id'">Delete</button>
             </td>
         </tr>
 }

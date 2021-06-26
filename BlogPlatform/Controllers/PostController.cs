@@ -68,5 +68,20 @@ namespace BlogPlatform.Controllers
 
             return RedirectToAction("Details", "Post", new { id = model.Id});
         }
+
+        public IActionResult Delete(int id)
+        {
+            Post post = postRepo.GetById(id);
+
+            return View(post);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Post post)
+        {
+            postRepo.Delete(post);
+
+            return RedirectToAction("Index");
+        }
     }
 }

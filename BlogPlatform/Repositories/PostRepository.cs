@@ -23,7 +23,9 @@ namespace BlogPlatform.Repositories
 
         public void Delete(Post obj)
         {
-            throw new NotImplementedException();
+            db.Posts.Remove(obj);
+
+            db.SaveChanges();
         }
 
         public IEnumerable<Post> GetAll()

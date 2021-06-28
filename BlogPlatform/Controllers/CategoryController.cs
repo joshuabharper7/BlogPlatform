@@ -22,6 +22,16 @@ namespace BlogPlatform.Controllers
         {
             return View(categoryRepo.GetAll());
         }
+
+        public ViewResult Details(int id)
+        {
+            Category myCategory = categoryRepo.GetById(id);
+
+            Post myPost = postRepo.GetById(id);
+
+            return View(myPost);
+        }
+
         public IActionResult Create()
         {
             return View(new Category());
@@ -30,9 +40,22 @@ namespace BlogPlatform.Controllers
         [HttpPost]
         public IActionResult Create(Category model)
         {
-            categoryRepo.Create(model);
+            Category existingCategory = categoryRepo.GetByName(model.Name);
 
-            return RedirectToAction("Index");
+            if(existingCategory == null)
+            {
+                categoryRepo.Create(model);
+
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.ResultMessage = "That Category already exists.";
+
+            return View(model);
+
+            
+
+            
         }
 
         public IActionResult Update(int id)

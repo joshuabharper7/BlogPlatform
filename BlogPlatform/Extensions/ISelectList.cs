@@ -11,5 +11,7 @@ namespace BlogPlatform.Extensions
         IEnumerable<Post> GetPosts();
         IEnumerable<Category> GetCategories();
         Category GetCategoryById(int id);
+        Category GetByName(string name);
+
     }
 }

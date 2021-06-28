@@ -1,4 +1,5 @@
-﻿using BlogPlatform.Models;
+﻿using BlogPlatform.Extensions;
+using BlogPlatform.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +39,11 @@ namespace BlogPlatform.Repositories
             return db.Posts.Where(p => p.Id == id).FirstOrDefault();
         }
 
+        public Post GetByName(string name)
+        {
+            return db.Posts.Where(c => c.Title == name).FirstOrDefault();
+        }
+
         public IEnumerable<Category> GetCategories()
         {
             return db.Categories.ToList();
@@ -50,7 +56,7 @@ namespace BlogPlatform.Repositories
 
         public IEnumerable<Post> GetPosts()
         {
-            throw new NotImplementedException();
+            return db.Posts.ToList();
         }
 
         public void Update(Post obj)
@@ -58,6 +64,11 @@ namespace BlogPlatform.Repositories
             db.Posts.Update(obj);
 
             db.SaveChanges();
+        }
+
+        Category ISelectList.GetByName(string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }

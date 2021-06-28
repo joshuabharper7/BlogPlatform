@@ -15,9 +15,11 @@ namespace BlogPlatform.Repositories
         }
         public void Create(Category obj)
         {
+            
             db.Categories.Add(obj);
 
             db.SaveChanges();
+            
         }
 
         public void Delete(Category obj)
@@ -25,6 +27,11 @@ namespace BlogPlatform.Repositories
             db.Categories.Remove(obj);
 
             db.SaveChanges();
+        }
+
+        public Category GetByName(string name)
+        {
+            return db.Categories.Where(c => c.Name == name).FirstOrDefault();
         }
 
         public IEnumerable<Category> GetAll()

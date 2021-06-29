@@ -27,9 +27,7 @@ namespace BlogPlatform.Controllers
         {
             Category myCategory = categoryRepo.GetById(id);
 
-            Post myPost = postRepo.GetById(id);
-
-            return View(myPost);
+            return View(myCategory);
         }
 
         public IActionResult Create()
@@ -51,11 +49,7 @@ namespace BlogPlatform.Controllers
 
             ViewBag.ResultMessage = "That Category already exists.";
 
-            return View(model);
-
-            
-
-            
+            return View(model);  
         }
 
         public IActionResult Update(int id)

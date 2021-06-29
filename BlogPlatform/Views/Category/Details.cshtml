@@ -1,0 +1,23 @@
+﻿@model BlogPlatform.Models.Category
+
+@{
+    ViewData["Title"] = "Posts Within Category";
+}
+
+<h1>Posts Within Category</h1>
+<hr />
+<div>
+    
+    <div>
+        @foreach (var post in Model.Posts)
+            {
+                <div><a href="/Post/Details/@post.Id">@post.Title</a></div>
+            }
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to Categories</a>
+</div>
+
+
+

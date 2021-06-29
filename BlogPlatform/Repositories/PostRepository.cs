@@ -39,9 +39,9 @@ namespace BlogPlatform.Repositories
             return db.Posts.Where(p => p.Id == id).FirstOrDefault();
         }
 
-        public Post GetByName(string name)
+        public Post GetByName(string title)
         {
-            return db.Posts.Where(c => c.Title == name).FirstOrDefault();
+            return db.Posts.Where(c => c.Title == title).FirstOrDefault();
         }
 
         public IEnumerable<Category> GetCategories()

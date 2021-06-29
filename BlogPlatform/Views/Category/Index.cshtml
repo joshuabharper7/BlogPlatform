@@ -23,9 +23,10 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    <a href="/Category/Details/@item.Id">@Html.DisplayFor(modelItem => item.Name)</a>
                 </td>
                 <td>
+                     |
                     <button type="button" onclick="location.href='/Category/Update/@item.Id'">Edit</button> |
                     <button type="button" onclick="location.href='/Category/Delete/@item.Id'">Delete</button>
                 </td>

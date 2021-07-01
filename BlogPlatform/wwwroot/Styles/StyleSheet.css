@@ -52,7 +52,6 @@ h4 a {
     padding-top: 20px;
 }
 
-    /* The navigation menu links */
     .sidenav a {
         padding: 6px 8px 10px 16px;
         text-decoration: none;
@@ -65,7 +64,6 @@ h4 a {
         border-bottom: 3px solid rgb(0 0 0 / 0.87);
     }
 
-        /* When you mouse over the navigation links, change their color */
         .sidenav a:hover {
             color: black;
             -webkit-text-stroke-width: .09px;
@@ -143,12 +141,6 @@ h4 a {
         -webkit-text-stroke-color: black;
     }
 
-    .posthead {
-        /*grid-area: none;*/
-        /*display: flex;
-    justify-content: center;*/
-    }
-
     .postitems {
         color: black;
         -webkit-text-stroke-width: .09px;
@@ -156,18 +148,6 @@ h4 a {
         font-weight: bold;
     }
 
-
-
-
-    /*div a {
-    color: black;
-    font-weight: bold;
-}
-
-    div a hover {
-        color: #efc876;
-        font-weight: bold;
-    }*/
     h1 a {
         text-decoration: inherit;
         color: #efc876;
@@ -199,23 +179,12 @@ h4 a {
             font-weight: bold;
         }
 
-    a {
-        text-decoration: none;
-        list-style-type: none;
-        font-size: 18px;
-    }
-
-    /*#createpost, #updatepost {
-    display: flex;
-    justify-content: center;
-
+a {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 18px;
+    color: black;
 }
-
-#postbody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
 
     .add-grid {
         display: grid;

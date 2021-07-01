@@ -19,6 +19,7 @@ namespace BlogPlatform.Models
         public DateTime PublishDate { get; set; }
         [Display(Name = "Category:")]
         public int CategoryId { get; set; }
+        [Display(Name = "Category:")]
         public virtual Category Category { get; set; }
 
         public Post()

@@ -7,7 +7,6 @@
 <h1>Post Details</h1>
 
 <div>
-    <h4>Post</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -43,8 +42,10 @@
     </dl>
 </div>
 <div>
-    <button type="button" onclick="location.href='/Post/Update/@Model.Id'">Edit</button> | 
-    <button type="button" onclick="location.href='/Post/Delete/@Model.Id'">Delete</button>
+    <button class="button button" type="button" onclick="location.href='/Post/Update/@Model.Id'">Edit</button> | 
+    <button class="button button" type="button" onclick="location.href='/Post/Delete/@Model.Id'">Delete</button>
     <hr />
+</div>
+<div id="postdetailsreturn">
     <a href="/Post/">Back to Posts</a> | <a href="/Category/Details/@Model.CategoryId">Back to Category</a>
 </div>

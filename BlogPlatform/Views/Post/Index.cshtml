@@ -6,12 +6,13 @@
 
 <h1>My Posts</h1>
 
-<p>
-    <a href="/Post/Create/">Create New Post</a>
+<p id="createapost">
+    <br />
+    <a href="/Post/Create/">Create A New Post</a>
 </p>
 <table class="table">
-    <thead>
-        <tr>
+    <thead class="posthead">
+        <tr id="posttitle">
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
@@ -24,9 +25,11 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+
+    <tbody class="postitems">
 @foreach (var item in Model) {
-        <tr>
+        <tr >
+
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
@@ -38,8 +41,8 @@
             </td>
 
             <td>
-                <button type="button" onclick="location.href='/Post/Details/@item.Id'">Details</button> |
-                <button type="button" onclick="location.href='/Post/Delete/@item.Id'">Delete</button>
+                <button class="button button" type="button" onclick="location.href='/Post/Details/@item.Id'">Details</button> |
+                <button class="button button" type="button" onclick="location.href='/Post/Delete/@item.Id'">Delete</button>
             </td>
         </tr>
 }

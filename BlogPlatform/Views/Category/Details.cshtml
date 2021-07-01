@@ -8,14 +8,14 @@
 <hr />
 <div>
     
-    <div>
+    <div id="divpadding">
         @foreach (var post in Model.Posts)
             {
                 <div><a href="/Post/Details/@post.Id">@post.Title</a></div>
             }
     </div>
 </div>
-<div>
+<div id="divpadding">
     <a asp-action="Index">Back to Categories</a>
 </div>
 

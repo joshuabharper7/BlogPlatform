@@ -7,21 +7,21 @@
 <h1>Update Post</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div id="updatepost" class="col-md-4">
         <form asp-action="Update">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
+            <div id="postupdateeveryother" class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div id="postbody" class="form-group">
                 <label asp-for="Body" class="control-label"></label>
-                <input asp-for="Body" class="form-control" />
+                <textarea asp-for="Body" class="form-control" rows="5" cols="22"></textarea>
                 <span asp-validation-for="Body" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div id="postupdateeveryother" class="form-group">
                 <label asp-for="Author" class="control-label"></label>
                 <input asp-for="Author" class="form-control" />
                 <span asp-validation-for="Author" class="text-danger"></span>
@@ -34,13 +34,13 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input class="button button" type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
+<div id="updatereturn">
     <a href="/Post/Details/@Model.Id">Back to Post</a>
 </div>
 

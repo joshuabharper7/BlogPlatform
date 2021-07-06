@@ -1,4 +1,5 @@
-﻿using BlogPlatform.Models;
+﻿using BlogPlatform.Extensions;
+using BlogPlatform.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,20 @@ namespace BlogPlatform.Repositories
         {
             this.db = db;
         }
+
+        public void Create(Post obj)
+        {
+            db.Posts.Add(obj);
+            db.SaveChanges();
+        }
+
+        public void Delete(Post obj)
+        {
+            db.Posts.Remove(obj);
+
+            db.SaveChanges();
+        }
+
         public IEnumerable<Post> GetAll()
         {
             return db.Posts.ToList();
@@ -21,7 +36,39 @@ namespace BlogPlatform.Repositories
 
         public Post GetById(int id)
         {
-            return db.Posts.Where(prop => prop.Id == id).FirstOrDefault();
+            return db.Posts.Where(p => p.Id == id).FirstOrDefault();
+        }
+
+        public Post GetByName(string title)
+        {
+            return db.Posts.Where(c => c.Title == title).FirstOrDefault();
+        }
+
+        public IEnumerable<Category> GetCategories()
+        {
+            return db.Categories.ToList();
+        }
+
+        public Category GetCategoryById(int id)
+        {
+            return db.Categories.Find(id);
+        }
+
+        public IEnumerable<Post> GetPosts()
+        {
+            return db.Posts.ToList();
+        }
+
+        public void Update(Post obj)
+        {
+            db.Posts.Update(obj);
+
+            db.SaveChanges();
+        }
+
+        Category ISelectList.GetByName(string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }

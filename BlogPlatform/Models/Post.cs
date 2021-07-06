@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -8,26 +9,31 @@ namespace BlogPlatform.Models
     public class Post
     {
         public int Id { get; set; }
+        [Display(Name = "Post Title:")]
         public string Title { get; set; }
+        [Display(Name = "Post:")]
         public string Body { get; set; }
+        [Display(Name = "Author:")]
         public string Author { get; set; }
+        [Display(Name = "Date Posted:")]
         public DateTime PublishDate { get; set; }
-        public string Category { get; set; }
+        [Display(Name = "Category:")]
+        public int CategoryId { get; set; }
+        [Display(Name = "Category:")]
+        public virtual Category Category { get; set; }
 
         public Post()
         {
 
         }
 
-        public Post(int id, string title, string body, string author, DateTime publishDate, string category)
+        public Post(int id, int categoryId, string title, string body, string author)
         {
             Id = id;
             Title = title;
             Body = body;
             Author = author;
-            PublishDate = publishDate;
-            PublishDate = DateTime.Now;
-            Category = category;
+            CategoryId = categoryId;
         }
     }
 }

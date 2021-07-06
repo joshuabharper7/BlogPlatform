@@ -1,15 +1,50 @@
-﻿
+﻿@model IEnumerable<BlogPlatform.Models.Post>
+
 @{
-    Layout = null;
+    ViewData["Title"] = "My Posts";
 }
 
-<!DOCTYPE html>
+<h1>My Posts</h1>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>View</title>
-</head>
-<body>
-</body>
-</html>
+<p id="createapost">
+    <br />
+    <a href="/Post/Create/">Create A New Post</a>
+</p>
+<table class="table">
+    <thead class="posthead">
+        <tr id="posttitle">
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody class="postitems">
+@foreach (var item in Model) {
+        <tr >
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+
+            <td>
+                <button class="button button" type="button" onclick="location.href='/Post/Details/@item.Id'">Details</button> |
+                <button class="button button" type="button" onclick="location.href='/Post/Delete/@item.Id'">Delete</button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

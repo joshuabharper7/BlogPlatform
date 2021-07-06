@@ -1,2 +1,252 @@
-﻿body {
+﻿.background{
+    background-size: 100%;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    margin: 2rem;
+}
+
+h1, h2 a, h3 a {
+    display: inline-block;
+    color: #ffffff;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+h4 a {
+    color: #efc876;
+}
+
+#createapost a {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 25px;
+    -webkit-text-stroke-width: .9px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+}
+
+    #createapost a:hover {
+        display: flex;
+        justify-content: center;
+        color: black;
+        -webkit-text-stroke-width: .09px;
+        -webkit-text-stroke-color: white;
+        font-weight: bold;
+    }
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(121 120 120 / 0.65);
+    background: radial-gradient(rgb(0 0 0 / 87%), transparent);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+    .sidenav a {
+        padding: 6px 8px 10px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffffff;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        font-weight: bold;
+        display: block;
+        border-bottom: 3px solid rgb(0 0 0 / 0.87);
+    }
+
+        .sidenav a:hover {
+            color: black;
+            -webkit-text-stroke-width: .09px;
+            -webkit-text-stroke-color: white;
+            font-weight: bold;
+        }
+
+    #postdetailsreturn a, #updatereturn a {
+        display: inline;
+        color: black;
+        font-weight: bold;
+    }
+
+        #postdetailsreturn a:hover, #updatereturn a:hover {
+            display: inline;
+            color: #ffffff;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            font-weight: bold;
+        }
+
+    #posttitle {
+        color: black;
+        -webkit-text-stroke-width: .09px;
+        -webkit-text-stroke-color: white;
+        font-weight: bold;
+    }
+
+    #postupdateeveryother {
+        color: black;
+        font-weight: bold;
+    }
+
+    .col-sm-2 {
+        color: black;
+        font-weight: bold;
+    }
+
+    table {
+        margin: auto;
+        padding-left: 210px;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .tbl-header {
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    .tbl-content {
+        height: 300px;
+        overflow-x: auto;
+        margin-top: 0px;
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    th, th a {
+        padding: 20px 15px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 15px;
+        color: rgb(0 0 0);
+        -webkit-text-stroke-color: black;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    td, td a {
+        padding: 15px;
+        text-align: left;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 18px;
+        color: rgb(0 0 0);
+        -webkit-text-stroke-color: black;
+    }
+
+    .postitems {
+        color: black;
+        -webkit-text-stroke-width: .09px;
+        -webkit-text-stroke-color: white;
+        font-weight: bold;
+    }
+
+    h1 a {
+        text-decoration: inherit;
+        color: #efc876;
+    }
+
+        h1 a:hover {
+            color: black;
+        }
+
+    ul {
+        list-style-type: none;
+        display: inline-block;
+    }
+
+        ul li {
+            float: left;
+            font-size: large;
+        }
+
+    li a {
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: inherit;
+        color: #efc876;
+    }
+
+        a:hover, li a:hover {
+            color: black;
+            font-weight: bold;
+        }
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 18px;
+    color: black;
+}
+
+    .add-grid {
+        display: grid;
+        margin: 2rem;
+        font-size: 18px;
+    }
+
+    .form-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    label {
+        float: left;
+        width: 5em;
+        text-align: right;
+    }
+
+input, select, textarea {
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+    #button {
+        margin-left: 7em;
+    }
+
+hr {
+    border: hidden;
+    background: radial-gradient(#ffffff,rgb(75 74 74),black);
+    height: 5px;
+    border-radius: 5px;
+    width: 770px;
+}
+
+.row {
+    display: inline-block;
+    background-color: rgb(255 255 255 / 0.65);
+    padding-right: 25px;
+    background: radial-gradient(white, transparent);
+    border-radius: 5px;
+    width: 750px;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 5px;
+}
+
+    .button:hover {
+        background-color: #555555;
+        color: white;
+        border-radius: 5px;
+    }
+
+#divpadding, #divpadding a, #divpadding a:hover, #divpadding a:active {
+    padding-bottom: 10px;
+    color: black;
+}
+
